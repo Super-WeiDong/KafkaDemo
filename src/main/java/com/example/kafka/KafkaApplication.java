@@ -20,7 +20,7 @@ public class KafkaApplication {
 	@Bean
 	CommandLineRunner commandLineRunner(KafkaTemplate<String,String> kafkaTemplate){
 		return args ->{
-			for(int i=0;i<1000000;i++)
+			for(int i=0;i<100;i++)
 			kafkaTemplate.send("dream","A bad korean guy punch me "+i+" times :)");
 		};
 	}
